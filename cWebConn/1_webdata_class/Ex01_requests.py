@@ -33,7 +33,8 @@ res = requests.get(url)
 print(res) #<Response [200]>
 
 200 갔다가왔는데 문제없이 성공함
-405 접근 불가
+404 갔다가왔는데 파일을 못찾고 돌아옴 
+405 갔다가왔는데 get post든 뭔가 안맞음 접근 문제
 500 서버문제 
 '''
 # res=requests.post(url) #post방식은 폼에서만 이용할수 있기 때문에 오류
@@ -42,6 +43,16 @@ print(res) #<Response [200]>
 url = 'http://www.google.com'
 res = requests.get(url)
 print(res.text)
+#res = requests.post(url)
+'''post방식 지금은 오류남
+http://www.google.com이렇게 바로 요청을해서 넘어가는 자체의 기본값은 get방식
+post는 form태그 안에서만 쓸 수 있음 
+form태그안에서 메소드를 내가 요청을 할건데
+http프로토콜에 헤더와 바디 부분이 있는데 이름만 헤더에 날리고
+나머지는 다 바디부분에 날려서 쓰겠다가 post
+그러므로 기본적으로 http://www.google.com이렇게 보낼 땐 get방식이기 때문에
+post방식은 오류가남'''
+
 print('-'*50)
 print(res.content)
 #출력에 b가 붙었음 파이썬은 기본적으로 문자형태를 utf-8로 읽는데
