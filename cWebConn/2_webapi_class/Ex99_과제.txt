@@ -1,0 +1,9 @@
+1. requests.get() 과 urllib.request.urlopen() 차이
+
+2. 스크랩핑 (Scraping) 과 크롤링 (Crawling) 차이 정리하세요
+
+3. urllib.parse.urlparse()와 BeautifulSoup 이용과의 차이
+
+----------------------------------------------------------
+[과제]
+yes24에서 한글이든 영어든 python검색해서 이미지 이름 , 책제목, 저자,출판사,출판일,가격 크롤링해서 db에 저장하기
