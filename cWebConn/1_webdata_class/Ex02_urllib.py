@@ -1,6 +1,6 @@
 from urllib import request #request에 s가 붙지 않음
-#urllib은 파이썬 자체의 내장모듈이라 install안해도됨
-#requests는 외장 모듈
+#urllib은 파이썬 자체의 내장라이브러리이라 install안해도됨
+#requests는 외장 라이브러리
 
 site = request.urlopen('http://www.google.com')
 #requests는 get방식과 post방식등으로 사용 하는데 request는 urlopen사용

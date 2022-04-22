@@ -27,7 +27,7 @@ def download_file(url):
 
     try:
         request.urlretrieve(url,savepath)
-        time.sleep(2)
+        time.sleep(2)#요청했다 받다가 넘 빠르면 데이터가 잘 안받아짐으로 요청하고 받는거 사이에 2초정도 시간을 주기
         return savepath
     except:
         print('failed download..', url)

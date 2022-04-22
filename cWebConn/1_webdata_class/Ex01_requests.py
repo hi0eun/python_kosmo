@@ -60,6 +60,7 @@ print(res.content)
 #여러 글자들이 붙음 정리해둘 것
 print('-'*50)
 print(res.headers)
+#requests처럼 이렇게 사이트가 오가면 헤더가오가는데 돌아올때 사이트가 주는 그 헤더의 정보를 볼 수 있음
 #넘어오는 구조 모양이 딕셔너리
 for k,v in res.headers.items() :
     print('key:',k, '////',"value:",v)
