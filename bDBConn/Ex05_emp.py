@@ -20,6 +20,9 @@ def set_contact():
     # return contact
     # 1. Connection 얻어오기
     conn = pymysql.connect(**config)
+    #다른방법
+    #conn = pymysql.connect(host='127.0.0.1', user='root',password='admin1234',db='scott',charset='utf8')
+
     # 2. sql 문장 만들기
     sql ='''
     INSERT INTO emp (empno,ename,job,deptno)
