@@ -38,14 +38,14 @@ config = {
      'charset':'utf8',
      'use_unicode' : True}
 
-def set_db(name,tel,addr,latitude,hardness):
+def set_db(name,tel,addr,latitude,longitude):
     #1. Connection 얻어오기
     conn = pymysql.connect(**config)
     # 2. sql 문장 만들기
     sql ='''
-        INSERT INTO store (name,tel,addr,latitude,hardness)
+        INSERT INTO store (name,tel,addr,latitude,longitude)
         VALUES( "{0}", "{1}", "{2}", "{3}","{4}" )
-        '''.format(name,tel,addr,latitude,hardness)
+        '''.format(name,tel,addr,latitude,longitude)
     # 3. cursor 얻어오기 -> 자바에서의 전송객체 얻어오기 대신일 수도
     cursor = conn.cursor()
     # 4. sql 실행(전송)
